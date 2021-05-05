@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bin/scripts/Console.gd" type="Script" id=1]
+
+[node name="Console" type="Node2D"]
+position = Vector2( 160, 200 )
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = -32.0
+margin_right = 704.0
+margin_bottom = 312.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+margin_left = 8.0
+margin_top = 312.0
+margin_right = 608.0
+margin_bottom = 328.0
+text = ">"
+draw_tabs = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" type="Button" parent="Panel"]
+margin_left = 608.0
+margin_top = 304.0
+margin_right = 696.0
+margin_bottom = 336.0
+text = "Run"
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Console" type="Panel" parent="Panel"]
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 696.0
+margin_bottom = 304.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Console"]
+margin_right = 688.0
+margin_bottom = 280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/Console/VBoxContainer"]
+margin_right = 688.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VScrollBar" type="VScrollBar" parent="Panel/Console"]
+visible = false
+anchor_left = -0.012
+anchor_top = -0.029
+anchor_right = 1.012
+anchor_bottom = 1.114
+margin_left = 680.256
+margin_top = 8.12
+margin_right = -8.25604
+margin_bottom = -31.92
+
+[node name="Close" type="Button" parent="."]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 680.0
+margin_top = -32.0
+margin_right = 704.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Label" parent="Close"]
+margin_right = 24.0
+margin_bottom = 24.0
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Panel/Run" to="." method="_on_Run_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]

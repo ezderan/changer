@@ -1,0 +1,200 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bin/scripts/Settings_menu.gd" type="Script" id=1]
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 256.0
+margin_top = 128.0
+margin_right = -256.0
+margin_bottom = -144.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 0, 0.764706, 1, 1 )
+margin_right = 768.0
+margin_bottom = 448.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="System" type="Button" parent="Panel"]
+self_modulate = Color( 0, 0.854902, 1, 1 )
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 144.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="System" type="Label" parent="Panel/System"]
+margin_right = 128.0
+margin_bottom = 64.0
+text = "System"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sys_panel" type="Panel" parent="Panel/System"]
+margin_left = 128.0
+margin_right = 736.0
+margin_bottom = 416.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sys_label" type="Label" parent="Panel/System/Sys_panel"]
+margin_right = 176.0
+margin_bottom = 48.0
+text = "System Configuration"
+align = 1
+valign = 1
+
+[node name="Graphics" type="Button" parent="Panel"]
+self_modulate = Color( 0, 0.807843, 1, 1 )
+margin_left = 16.0
+margin_top = 80.0
+margin_right = 144.0
+margin_bottom = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graphics" type="Label" parent="Panel/Graphics"]
+margin_right = 128.0
+margin_bottom = 64.0
+text = "Graphics"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gr_panel" type="Panel" parent="Panel/Graphics"]
+visible = false
+margin_left = 128.0
+margin_top = -64.0
+margin_right = 736.0
+margin_bottom = 352.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gr_label" type="Label" parent="Panel/Graphics/Gr_panel"]
+margin_right = 176.0
+margin_bottom = 48.0
+text = "Graphics Configuration"
+align = 1
+valign = 1
+
+[node name="Controler" type="Button" parent="Panel"]
+self_modulate = Color( 0, 0.807843, 1, 1 )
+margin_left = 16.0
+margin_top = 144.0
+margin_right = 144.0
+margin_bottom = 208.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controler" type="Label" parent="Panel/Controler"]
+margin_right = 128.0
+margin_bottom = 64.0
+text = "Controler"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ctrl_panel" type="Panel" parent="Panel/Controler"]
+visible = false
+margin_left = 128.0
+margin_top = -128.0
+margin_right = 736.0
+margin_bottom = 288.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ctrl_label" type="Label" parent="Panel/Controler/Ctrl_panel"]
+margin_right = 176.0
+margin_bottom = 48.0
+text = "Controller"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="Button" parent="Panel"]
+self_modulate = Color( 0, 0.807843, 1, 1 )
+margin_left = 16.0
+margin_top = 208.0
+margin_right = 144.0
+margin_bottom = 272.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="Label" parent="Panel/Language"]
+margin_right = 128.0
+margin_bottom = 64.0
+text = "Language"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lan_panel" type="Panel" parent="Panel/Language"]
+visible = false
+margin_left = 128.0
+margin_top = -192.0
+margin_right = 736.0
+margin_bottom = 224.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lan_label" type="Label" parent="Panel/Language/Lan_panel"]
+margin_right = 176.0
+margin_bottom = 48.0
+text = "Language"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Panel"]
+self_modulate = Color( 0, 0.807843, 1, 1 )
+anchor_right = 0.062
+anchor_bottom = 0.375
+margin_left = 16.0
+margin_top = 264.0
+margin_right = 96.384
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Label" parent="Panel/Quit"]
+margin_right = 128.0
+margin_bottom = 64.0
+text = "Quit"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Panel/System" to="." method="_on_System_pressed"]
+[connection signal="pressed" from="Panel/Graphics" to="." method="_on_Graphics_pressed"]
+[connection signal="pressed" from="Panel/Controler" to="." method="_on_Controler_pressed"]
+[connection signal="pressed" from="Panel/Language" to="." method="_on_Language_pressed"]
+[connection signal="pressed" from="Panel/Quit" to="." method="_on_Quit_pressed"]

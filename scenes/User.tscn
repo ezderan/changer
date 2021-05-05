@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IMG_20210430_182921_699.jpg" type="Texture" id=1]
+
+[node name="User" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1056.0
+margin_bottom = -656.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="User id" type="Button" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ID" type="Label" parent="User id"]
+margin_left = 72.0
+margin_top = 8.0
+margin_right = 216.0
+margin_bottom = 24.0
+text = " User"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exp" type="ProgressBar" parent="."]
+margin_left = 64.0
+margin_top = 40.0
+margin_right = 224.0
+margin_bottom = 56.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+scale = Vector2( 0.0333333, 0.0333333 )
+texture = ExtResource( 1 )
